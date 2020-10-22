@@ -1,0 +1,8 @@
+button {
+  border: none;
+  filter: opacity(20);
+  margin: 0;
+  width: 100px;
+  height: 100px;
+  background-color: dimgrey;
+}
