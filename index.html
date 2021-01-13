@@ -4,51 +4,40 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Calculator</title>
-    <style>
-      /* button and inputNo height and other properties but not width */
-      #inputNo, .buttons > button {
-        height: 100px;
-        border: none;
-        border-radius: 4px;
-      }
-    </style>
+    <link rel="stylesheet" href="index.css">
   <body>
     <h1>Calculator</h1>
-    <input id="inputNo" disabled>
+    
     <br>
     <div class="buttons">
+      <input id="inputNo" disabled>
+      <br>
+      <button id="clearAll" onclick="clsAll()">AC</button>
       <button id="clearBut" onclick="cls()">C</button>
-      <button onclick="addINput("/")">D</button>
+      <button onclick="addINput('/')">D</button>
       <button onclick="addINput('*')">x</button>
       <br>
-      <button onclick="addINput(7)">7</button>
-      <button onclick="addINput(8)">8</button>
-      <button onclick="addINput(9)">9</button>
+      <button onclick="addINput('7')">7</button>
+      <button onclick="addINput('8')">8</button>
+      <button onclick="addINput('9')">9</button>
       <button onclick="addINput('-')">-</button>
       <br>
-      <button onclick="addINput(4)">4</button>
-      <button onclick="addINput(5)">5</button>
-      <button onclick="addINput(6)">6</button>
+      <button onclick="addINput('4')">4</button>
+      <button onclick="addINput('5')">5</button>
+      <button onclick="addINput('6')">6</button>
       <button onclick="addINput('+')">+</button>
       <br>
-      <button onclick="addINput(1)">1</button>
-      <button onclick="addINput(2)">2</button>
-      <button onclick="addINput(3)">3</button>
+      <button onclick="addINput('1')">1</button>
+      <button onclick="addINput('2')">2</button>
+      <button onclick="addINput('3')">3</button>
       <button onclick="calculating()">=</button>
       <br>
-      <button onclick="addINput(0)">0</button>   
+      <button onclick="addINput('0')">0</button>   
       <button onclick="addINput('.')">.</button> 
       <br>
     </div>
-    <script>
-      // Making the input function
-      function addINput(num) {
-      document.getElementById('inputNo').value += num;
-      }
-      // Making the all clear function
-      function cls() {
-        document.getElementById('inputNo').value = " ";
-      }
+    <script src="index.js">
+      
     </script>
   </body>
 </html>
