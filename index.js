@@ -1,16 +1,29 @@
-let input = document.getElementById("inputNo").value;
+let input = document.getElementById("inputNo");
+let operators = ["+", "-", "*", "/", "."];
 // Making the input function
 function addINput(num) {
-    document.getElementById("inputNo").value += num;
+    if(input.value[0] == 0){
+        return input.value = num;
+    }else if(input.value[0] == 0 && operators.includes(num)){
+        return input.value = 0;
+    }else if(operators.includes(num) && operators.includes(input.value[input.value.length-1])){
+        return input.value = `${input.value.substring(0, input.value.length-1)}${num}`;
+    }else{
+        return input.value += num;
+    }
 }
 // Making the all clear function
 function clsAll() {
-    document.getElementById("inputNo").value = "";
+    input.value = 0;
 }
 // Making the last one clear funtion
 function cls(){
-    document.getElementById("inputNo").value = document.getElementById("inputNo").value.slice(0, -1);
+    if(input.value.length == 1){
+        return input.value = 0;
+    }else{
+        return input.value = input.value.slice(0, -1);
+    }
 }
 function calculating(){
-    document.getElementById("inputNo").value = eval( document.getElementById("inputNo").value);
+    input.value = eval(input.value);
 }

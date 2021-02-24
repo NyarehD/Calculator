@@ -8,13 +8,13 @@ html{
 
 }
 body{
-
+    background-color: rgb(31, 31, 31);
 }
 
 h1{
     text-align: center;
     font-size: 50px;
-    color: goldenrod
+    color: goldenrod;
 }
 #inputNo{
     width: 370px;
@@ -22,13 +22,13 @@ h1{
     border-radius: 50px;
     border: none;
     background: rgb(216, 216, 216);
-    padding: 10px 20px;
+    padding: 10px 30px;
     text-align: right;
     margin-bottom: 1px;
 }
 /* Making the buttons to center */
 .buttons {
-    margin: 0 auto;
+    margin: 10px auto;
     text-align: center;
     max-width: auto;
 }
@@ -38,7 +38,7 @@ h1{
    padding: 0;
    border-radius: 50%;
    border: none;
-   background: #f4d58d;
+   background: #e9aa19;
    margin: 1px -2px;
 }
 .buttons > button:hover {
