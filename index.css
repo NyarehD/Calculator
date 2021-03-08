@@ -26,27 +26,64 @@ h1{
     padding: 10px 30px;
     text-align: right;
     margin-bottom: 1px;
+    color: rgb(51, 49, 49);
 }
 /* Making the buttons to center */
 .buttons {
     margin: 10px auto;
     text-align: center;
     max-width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 500px;
 }
-.buttons > button {
+.buttons button {
    width: 100px;
    height: 100px;
    padding: 0;
-   border-radius: 50%;
+   border-radius: 50px;
    border: none;
-   background: #e9aa19;
-   margin: 1px -2px;
+   margin: 4px 5px;
 }
-.buttons > button:hover {
+.buttons > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttons button:hover {
     border: none;
-    background-color: #c7ac6d7a;
+    background-color: #b6b0a2bd;
 }
-.buttons > button:active {
+.buttons button:active {
     border:none;
     background-color: #f4d58daf;
+}
+.buttons > div > button:last-child{
+    background-color:goldenrod;
+}
+.buttons > div > button:last-child:hover, .first-row > button:hover{
+    background-color: rgba(218, 165, 32, 0.479);
+}
+.buttons > div:first-child button{
+    background-color: goldenrod;
+}
+
+.buttons > div:last-child{
+    display: flex;
+    justify-content: flex-start;
+    margin: -104px 100px 0 0;
+}
+.buttons > div:first-child > *{
+    background-color: goldenrod;
+}
+.buttons > div:nth-child(5){
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+.first-row > button{
+    background-color: goldenrod;
 }

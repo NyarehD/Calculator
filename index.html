@@ -13,30 +13,34 @@
     <br>
     <div class="buttons">
       <input id="inputNo" disabled>
-      <br>
-      <button id="clearAll" onclick="clsAll()">AC</button>
-      <button id="clearBut" onclick="cls()">C</button>
-      <button onclick="addINput('/')">D</button>
-      <button onclick="addINput('*')">x</button>
-      <br>
-      <button onclick="addINput('7')">7</button>
-      <button onclick="addINput('8')">8</button>
-      <button onclick="addINput('9')">9</button>
-      <button onclick="addINput('-')">-</button>
-      <br>
-      <button onclick="addINput('4')">4</button>
-      <button onclick="addINput('5')">5</button>
-      <button onclick="addINput('6')">6</button>
-      <button onclick="addINput('+')">+</button>
-      <br>
-      <button onclick="addINput('1')">1</button>
-      <button onclick="addINput('2')">2</button>
-      <button onclick="addINput('3')">3</button>
-      <button onclick="calculating()">=</button>
-      <br>
-      <button onclick="addINput('0')">0</button>   
-      <button onclick="addINput('.')">.</button> 
-      <br>
+      <div class="first-row">
+        <button id="clearAll" onclick="clsAll()">AC</button>
+        <button id="clearBut" onclick="cls()">C</button>
+        <button onclick="addINput('/')">D</button>
+        <button onclick="addINput('*')">x</button>
+      </div>
+      <div>
+        <button onclick="addINput('7')">7</button>
+        <button onclick="addINput('8')">8</button>
+        <button onclick="addINput('9')">9</button>
+        <button onclick="addINput('-')">-</button>
+      </div>
+      <div>
+        <button onclick="addINput('4')">4</button>
+        <button onclick="addINput('5')">5</button>
+        <button onclick="addINput('6')">6</button>
+        <button onclick="addINput('+')">+</button>
+      </div>
+      <div>
+        <button onclick="addINput('1')">1</button>
+        <button onclick="addINput('2')">2</button>
+        <button onclick="addINput('3')">3</button>
+        <button onclick="calculating()" style="height: 210px;">=</button>
+      </div>
+      <div>
+        <button onclick="addINput('0')" style="width: 200px; ">0</button>   
+        <button onclick="addINput('.')">.</button>
+      </div> 
     </div>
     <script src="index.js">
       
