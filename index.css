@@ -6,16 +6,15 @@ html{
     width: 100%;
     margin: 0;
     box-sizing: border-box;
-
 }
 body{
     background-color: rgb(31, 31, 31);
 }
-
 h1{
     text-align: center;
-    font-size: 50px;
+    font-size: 70px;
     color: goldenrod;
+    margin: 20px 20px;
 }
 #inputNo{
     width: 370px;
@@ -40,7 +39,7 @@ h1{
     flex-flow: row wrap;
     width: 500px;
     background-color: #3d3d3bbd;
-    padding: 20px;
+    padding: 20px 20px 40px 20px;
     border-radius: 50px;
 }
 .buttons button {
@@ -77,10 +76,10 @@ h1{
     background-color: goldenrod;
 }
 
-.buttons > div:last-child{
+.buttons > div:nth-child(7){
     display: flex;
     justify-content: flex-start;
-    margin: -104px 100px 0 0;
+    margin: -150px -20px 0 0;
 }
 .buttons > div:first-child > *{
     background-color: goldenrod;
@@ -93,4 +92,50 @@ h1{
 }
 .first-row > button{
     background-color: goldenrod;
+}
+
+
+.switch{
+    width: 80px;
+    height: 43px;
+    position: relative;
+    display: inline-block;
+}
+.switch > input{
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+.slider{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(252, 239, 207);
+    transition: 0.5s;
+    width: 80px;
+}
+.slider::before{
+    position: absolute;
+    content: "";
+    bottom: 4px;
+    left: 5px;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(255, 208, 0);
+    transition: 0.5s;
+}
+.switch > input:checked + .slider{
+    background-color: #5e5e5e;
+}
+.switch > input:checked + .slider::before{
+    transform: translateX(34px);
+    background-color: #363636;
+}
+.slider.round{
+    border-radius: 40px;
+}
+.slider.round::before{
+    border-radius: 34px;
 }
