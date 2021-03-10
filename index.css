@@ -26,11 +26,12 @@ h1{
     padding: 10px 30px;
     text-align: right;
     margin-bottom: 1px;
-    color: rgb(51, 49, 49);
+    color: rgb(44, 42, 42);
+    overflow: auto;
 }
 /* Making the buttons to center */
 .buttons {
-    margin: 10px auto;
+    margin: 30px auto;
     text-align: center;
     max-width: auto;
     display: flex;
@@ -38,6 +39,9 @@ h1{
     align-items: center;
     flex-flow: row wrap;
     width: 500px;
+    background-color: #3d3d3bbd;
+    padding: 20px;
+    border-radius: 50px;
 }
 .buttons button {
    width: 100px;
@@ -58,13 +62,16 @@ h1{
 }
 .buttons button:active {
     border:none;
-    background-color: #f4d58daf;
+    background-color: #a19b8eaf;
 }
 .buttons > div > button:last-child{
     background-color:goldenrod;
 }
 .buttons > div > button:last-child:hover, .first-row > button:hover{
     background-color: rgba(218, 165, 32, 0.479);
+}
+.buttons > div > button:last-child:active, .first-row > button:active{
+    background-color: rgba(128, 98, 25, 0.671);
 }
 .buttons > div:first-child button{
     background-color: goldenrod;
@@ -78,7 +85,7 @@ h1{
 .buttons > div:first-child > *{
     background-color: goldenrod;
 }
-.buttons > div:nth-child(5){
+.buttons > div:nth-child(6){
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
