@@ -1,6 +1,7 @@
 *{
     font-size: xx-large;
     font-family: 'Aldrich', sans-serif;
+    color:rgb(39, 39, 39);
 }
 html{
     width: 100%;
@@ -8,12 +9,12 @@ html{
     box-sizing: border-box;
 }
 body{
-    background-color: rgb(31, 31, 31);
+    background-color: #ffd60a;
 }
 h1{
     text-align: center;
     font-size: 70px;
-    color: goldenrod;
+    color: rgb(49, 49, 49);
     margin: 20px 20px;
 }
 #inputNo{
@@ -21,7 +22,7 @@ h1{
     height: 80px;
     border-radius: 50px;
     border: none;
-    background: rgb(216, 216, 216);
+    background: rgb(255, 255, 255);
     padding: 10px 30px;
     text-align: right;
     margin-bottom: 1px;
@@ -29,7 +30,7 @@ h1{
     overflow: auto;
 }
 /* Making the buttons to center */
-.buttons {
+#buttons {
     margin: 30px auto;
     text-align: center;
     max-width: auto;
@@ -38,11 +39,11 @@ h1{
     align-items: center;
     flex-flow: row wrap;
     width: 500px;
-    background-color: #3d3d3bbd;
+    background-color: #fac720;
     padding: 20px 20px 40px 20px;
     border-radius: 50px;
 }
-.buttons button {
+#buttons button {
    width: 100px;
    height: 100px;
    padding: 0;
@@ -50,49 +51,36 @@ h1{
    border: none;
    margin: 4px 5px;
 }
-.buttons > div {
+#buttons > div {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.buttons button:hover {
+#buttons button:not(#buttons > div > button:last-child, .first-row > button):hover{
     border: none;
-    background-color: #b6b0a2bd;
+    background-color: #fafafaa6;
 }
-.buttons button:active {
+#buttons > div > button:last-child, .first-row > button{
+    background-color: #ffffff50;
+}
+#buttons > div > button:last-child:hover, .first-row > button:hover{
+    background-color: #e6e6e6a6;
+}
+#buttons button:not(#buttons > div > button:last-child, .first-row > button):active, #buttons > div > button:last-child:active, .first-row > button:active {
     border:none;
-    background-color: #a19b8eaf;
+    background-color: #c5c5c5af;
 }
-.buttons > div > button:last-child{
-    background-color:goldenrod;
-}
-.buttons > div > button:last-child:hover, .first-row > button:hover{
-    background-color: rgba(218, 165, 32, 0.479);
-}
-.buttons > div > button:last-child:active, .first-row > button:active{
-    background-color: rgba(128, 98, 25, 0.671);
-}
-.buttons > div:first-child button{
-    background-color: goldenrod;
-}
-
-.buttons > div:nth-child(7){
+#buttons > div:nth-child(7){
     display: flex;
     justify-content: flex-start;
     margin: -150px -20px 0 0;
 }
-.buttons > div:first-child > *{
-    background-color: goldenrod;
-}
-.buttons > div:nth-child(6){
+#buttons > div:nth-child(6){
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: flex-start;
-}
-.first-row > button{
-    background-color: goldenrod;
-}
+} 
 
 
 .switch{
@@ -123,7 +111,7 @@ h1{
     left: 5px;
     width: 35px;
     height: 35px;
-    background-color: rgb(255, 208, 0);
+    background-color: rgb(255, 187, 0);
     transition: 0.5s;
 }
 .switch > input:checked + .slider{
