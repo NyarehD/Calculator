@@ -39,7 +39,7 @@ h1{
     align-items: center;
     flex-flow: row wrap;
     width: 500px;
-    background-color: #fac720;
+    background-color: #ffde71;
     padding: 20px 20px 40px 20px;
     border-radius: 50px;
 }
@@ -58,13 +58,15 @@ h1{
 }
 #buttons button:not(#buttons > div > button:last-child, .first-row > button):hover{
     border: none;
-    background-color: #fafafaa6;
+    background-color: #fafafa7a;
+    border: none;
 }
 #buttons > div > button:last-child, .first-row > button{
     background-color: #ffffff50;
 }
 #buttons > div > button:last-child:hover, .first-row > button:hover{
     background-color: #e6e6e6a6;
+    border: none;
 }
 #buttons button:not(#buttons > div > button:last-child, .first-row > button):active, #buttons > div > button:last-child:active, .first-row > button:active {
     border:none;
@@ -82,7 +84,9 @@ h1{
     align-items: flex-start;
 } 
 
-
+.mode {
+    margin-top: 10px;
+}
 .switch{
     width: 80px;
     height: 43px;

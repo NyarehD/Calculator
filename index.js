@@ -37,21 +37,31 @@ nightModeSwitch.addEventListener("change", ()=>{
     const calculatorBackground = document.getElementById("buttons");
     const inputNo = document.getElementById("inputNo");
     const header = document.querySelector("h1");
+    const buttons = document.querySelectorAll("button");
     if(nightMode){
         // To daymode from nightmode
         console.log(`To daymode from nightmode ${nightMode}`);
         nightMode = false;
         bodyBackground.style.backgroundColor = "#ffd60a";
-        calculatorBackground.style.backgroundColor = "#fac720";
+        calculatorBackground.style.backgroundColor = "#ffde71";
         inputNo.style.backgroundColor = "rgb(255, 255, 255)";
+        inputNo.style.color =  "rgb(44, 42, 42)";
         header.style.color = "rgb(49, 49, 49)";
+        buttons.forEach(button => {
+            button.style.color = "rgb(39, 39, 39)";
+        });
     }else{
         // To nightmode from daymode
         console.log(`To nightmode from daymode ${nightMode}`);
         nightMode = true;
         bodyBackground.style.backgroundColor = "rgb(31, 31, 31)";
         calculatorBackground.style.backgroundColor = "#3d3d3bbd";
-        
+        inputNo.style.backgroundColor = "rgb(66, 66, 66)";
+        inputNo.style.color = "goldenrod";
         header.style.color = "goldenrod";
+        buttons.forEach(button => {
+            button.style.color = "goldenrod";
+        });
+        
     }
 })
