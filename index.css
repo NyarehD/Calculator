@@ -50,6 +50,7 @@ h1{
    border-radius: 50px;
    border: none;
    margin: 4px 5px;
+   outline: none;
 }
 #buttons > div {
     display: flex;
@@ -59,7 +60,6 @@ h1{
 #buttons button:not(#buttons > div > button:last-child, .first-row > button):hover{
     border: none;
     background-color: #fafafa7a;
-    border: none;
 }
 #buttons > div > button:last-child, .first-row > button{
     background-color: #ffffff50;
