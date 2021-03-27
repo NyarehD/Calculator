@@ -2,9 +2,10 @@ let input = document.getElementById("inputNo");
 let operators = ["+", "-", "*", "/", "."];
 // Making the input function
 function addINput(num) {
-    if (input.value[0] === 0) {
+    if (input.value[0] === '0') {
+        console.log("run");
         return input.value = num;
-    } else if (input.value[0] === 0 && operators.includes(num)) {
+    } else if (input.value[0] === '0' && operators.includes(num)) {
         return input.value = 0;
     } else if (operators.includes(num) && operators.includes(input.value[input.value.length - 1])) {
         return input.value = `${input.value.substring(0, input.value.length - 1)}${num}`;

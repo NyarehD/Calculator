@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -10,35 +10,35 @@
   <body>
     <div id="buttons">
       <h1>Calculator</h1>
-      <input id="inputNo" disabled>
+      <input id="inputNo" value="0" disabled>
       <div class="first-row">
-        <button id="clearAll" onclick="clsAll()">AC</button>
-        <button id="clearBut" onclick="cls()">C</button>
-        <button onclick="addINput('/')">D</button>
-        <button onclick="addINput('*')">x</button>
+        <button id="clearAll" onclick="clsAll()" class="operator-button">AC</button>
+        <button id="clearBut" onclick="cls()" class="operator-button">C</button>
+        <button onclick="addINput('/')" class="operator-button">D</button>
+        <button onclick="addINput('*')" class="operator-button">x</button>
       </div>
       <div>
         <button onclick="addINput('7')">7</button>
         <button onclick="addINput('8')">8</button>
         <button onclick="addINput('9')">9</button>
-        <button onclick="addINput('-')">-</button>
+        <button onclick="addINput('-')" class="operator-button">-</button>
       </div>
       <div>
         <button onclick="addINput('4')">4</button>
         <button onclick="addINput('5')">5</button>
         <button onclick="addINput('6')">6</button>
-        <button onclick="addINput('+')">+</button>
+        <button onclick="addINput('+')" class="operator-button">+</button>
       </div>
       <div>
         <button onclick="addINput('1')">1</button>
         <button onclick="addINput('2')">2</button>
         <button onclick="addINput('3')">3</button>
-        <button onclick="calculating()" style="height: 210px;">=</button>
+        <button onclick="calculating()" style="height: 210px;" class="operator-button">=</button>
       </div>
       <div>
-        <button onclick="addINput('0')" style="width: 200px; ">0</button>   
-        <button onclick="addINput('.')">.</button>
-      </div> 
+        <button onclick="addINput('0')" style="width: 200px; " >0</button>
+        <button class="operator-button" onclick="addINput('.')">.</button>
+      </div>
       <div class="mode">
         <img src="/sun-1.svg" alt="">
         <label class="switch round">
