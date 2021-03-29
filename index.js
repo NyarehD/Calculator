@@ -1,7 +1,7 @@
 let input = document.getElementById("inputNo");
 let operators = ["+", "-", "*", "/", "."];
 // Making the input function
-function addINput(num) {
+function addInput(num) {
     if (input.value[0] === '0') {
         console.log("run");
         return input.value = num;
@@ -61,8 +61,8 @@ nightModeSwitch.addEventListener("change", ()=>{
         inputNo.style.color = "goldenrod";
         header.style.color = "goldenrod";
         buttons.forEach(button => {
-            button.style.color = "goldenrod";
+            button.style.color = "whitesmoke";
         });
-        
+
     }
 })

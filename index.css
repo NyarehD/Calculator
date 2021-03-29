@@ -78,15 +78,14 @@ h1{
 #buttons > div:nth-child(7){
     display: flex;
     justify-content: flex-start;
-    margin: -150px 20px 0 0;
+    margin: -160px -20px 0 0;
 }
 #buttons > div:nth-child(6){
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: flex-start;
-} 
-
+}
 .mode {
     margin-top: 10px;
 }
