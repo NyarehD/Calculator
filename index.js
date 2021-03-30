@@ -30,39 +30,39 @@ function calculating(){
 }
 
 // Night mode function
-
 const nightModeSwitch = document.getElementById("nightMode");
-let nightMode = false;
-nightModeSwitch.addEventListener("change", ()=>{
+// Checking if night mode is on or off by checking input checkbox
+let nightMode = nightModeSwitch.checked;
+function nightModeChange() {
     const bodyBackground = document.querySelector("body");
     const calculatorBackground = document.getElementById("buttons");
     const inputNo = document.getElementById("inputNo");
     const header = document.querySelector("h1");
     const buttons = document.querySelectorAll("button");
-    if(nightMode) {
+    if (nightMode) {
         // To day mode from night mode
         console.log(`To day mode from night mode ${nightMode}`);
         nightMode = false;
-        bodyBackground.style.backgroundColor = "#ffd60a";
-        calculatorBackground.style.backgroundColor = "#ffde71";
-        inputNo.style.backgroundColor = "rgb(255, 255, 255)";
-        inputNo.style.color = "rgb(44, 42, 42)";
-        header.style.color = "rgb(49, 49, 49)";
+        bodyBackground.style.backgroundColor = "var(--body-background-day)";
+        calculatorBackground.style.backgroundColor = "var(--calculator-background-day)";
+        inputNo.style.backgroundColor = "var(--inputNo-backgroundColor-day)";
+        inputNo.style.color = "var(--inputNo-textColor-day)";
+        header.style.color = "var(--header-textColor-day)";
         buttons.forEach(button => {
-            button.style.color = "rgb(39, 39, 39)";
+            button.style.color = "var(--button-textColor-day)";
         });
-    }else{
+    } else {
         // To night mode from day mode
         console.log(`To night mode from day mode ${nightMode}`);
         nightMode = true;
-        bodyBackground.style.backgroundColor = "rgb(31, 31, 31)";
-        calculatorBackground.style.backgroundColor = "#3d3d3bbd";
-        inputNo.style.backgroundColor = "rgb(66, 66, 66)";
-        inputNo.style.color = "goldenrod";
-        header.style.color = "goldenrod";
+        bodyBackground.style.backgroundColor = "var(--body-background-night)";
+        calculatorBackground.style.backgroundColor = "var(--calculator-background-night)";
+        inputNo.style.backgroundColor = "var(--inputNo-backgroundColor-night)";
+        inputNo.style.color = "var(--inputNo-textColor-night)";
+        header.style.color = "var(--header-textColor-night)";
         buttons.forEach(button => {
-            button.style.color = "whitesmoke";
+            button.style.color = "var(--button-textColor-night)";
         });
-
     }
-})
+}
+nightModeSwitch.addEventListener("change", nightModeChange);

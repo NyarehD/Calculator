@@ -1,7 +1,26 @@
+:root{
+    --body-background-day:  #ffd60a;
+    --body-background-night: rgb(31, 31, 31);
+    --calculator-background-day: #ffde71;
+    --calculator-background-night: #3d3d3bbd;
+    --inputNo-backgroundColor-day: rgb(255, 255, 255);
+    --inputNo-backgroundColor-night: rgb(66, 66, 66);
+    --inputNo-textColor-day: rgb(44, 42, 42);
+    --inputNo-textColor-night: goldenrod;
+    --header-textColor-day: rgb(49, 49, 49);
+    --header-textColor-night: goldenrod;
+    --button-textColor-day: rgb(39, 39, 39);
+    --button-textColor-night: whitesmoke;
+    --button-backgroundColor-day-night: #fafafa7a;
+    --button-backgroundColor-day-night-hover: rgba(250, 250, 250, 0.8);
+    --button-backgroundColor-day-night-active: rgba(197, 197, 197, 0.46);
+    --button-operator-backgroundColor-day-night: rgba(255, 207, 0, 0.83);
+    --button-operator-backgroundColor-day-night-hover: rgba(255, 207, 0, 0.45);
+}
 *{
     font-size: xx-large;
     font-family: 'Aldrich', sans-serif;
-    color:rgb(39, 39, 39);
+    color: var(--button-textColor-day);
 }
 html{
     width: 100%;
@@ -9,12 +28,12 @@ html{
     box-sizing: border-box;
 }
 body{
-    background-color: #ffd60a;
+    background-color: var(--body-background-day);
 }
 h1{
     text-align: center;
     font-size: 70px;
-    color: rgb(49, 49, 49);
+    color: var(--header-textColor-day);
     margin: 20px 20px;
 }
 #inputNo{
@@ -22,11 +41,11 @@ h1{
     height: 80px;
     border-radius: 50px;
     border: none;
-    background: rgb(255, 255, 255);
+    background: var(--inputNo-backgroundColor-day);
     padding: 10px 30px;
     text-align: right;
     margin-bottom: 1px;
-    color: rgb(44, 42, 42);
+    color: var(--inputNo-textColor-day);
     overflow: auto;
 }
 /* Making the buttons to center */
@@ -38,7 +57,7 @@ h1{
     align-items: center;
     flex-flow: row wrap;
     width: 500px;
-    background-color: #ffde71;
+    background-color: var(--calculator-background-day);
     padding: 20px 20px 40px 20px;
     border-radius: 50px;
 }
@@ -58,21 +77,21 @@ h1{
 }
 #buttons > div > button{
     border: none;
-    background-color: #fafafa7a;
+    background-color: var(--button-backgroundColor-day-night); /* Do not change this */
 }
 #buttons > div > button:hover{
-    background: rgba(250, 250, 250, 0.8);
+    background: var(--button-backgroundColor-day-night-hover);
 }
 .operator-button{
-    background-color: rgba(255, 207, 0, 0.83) !important;
+    background-color: var(--button-operator-backgroundColor-day-night) !important;
 }
 .operator-button:hover{
-    background-color: rgba(255, 207, 0, 0.45) !important;
+    background-color: var(--button-operator-backgroundColor-day-night-hover) !important;
     border: none;
 }
 #buttons button:active{
     border:none;
-    background-color: rgba(197, 197, 197, 0.46) !important;
+    background-color: var(--button-backgroundColor-day-night-active) !important;
 }
 
 #buttons > div:nth-child(7){
@@ -86,6 +105,7 @@ h1{
     justify-content: center;
     align-items: flex-start;
 }
+/* I intentionally didn't use :root for this */
 .mode {
     margin-top: 10px;
 }
