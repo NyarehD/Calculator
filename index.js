@@ -32,7 +32,9 @@ function calculating(){
 // Night mode function
 const nightModeSwitch = document.getElementById("nightMode");
 // Checking if night mode is on or off by checking input checkbox
-let nightMode = nightModeSwitch.checked;
+let nightMode = !nightModeSwitch.checked;
+nightModeChange();
+nightModeSwitch.addEventListener("change", nightModeChange);
 function nightModeChange() {
     const bodyBackground = document.querySelector("body");
     const calculatorBackground = document.getElementById("buttons");
@@ -65,4 +67,3 @@ function nightModeChange() {
         });
     }
 }
-nightModeSwitch.addEventListener("change", nightModeChange);
