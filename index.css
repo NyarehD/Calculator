@@ -127,7 +127,7 @@ h1{
     left: 0;
     right: 0;
     background-color: rgb(252, 239, 207);
-    transition: 0.5s;
+    transition: 0.8s;
     width: 80px;
 }
 .slider::before{
