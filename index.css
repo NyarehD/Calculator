@@ -10,7 +10,7 @@
     --header-textColor-day: rgb(49, 49, 49);
     --header-textColor-night: goldenrod;
     --button-textColor-day: rgb(39, 39, 39);
-    --button-textColor-night: whitesmoke;
+    --button-textColor-night: rgb(54, 54, 54);
     --button-backgroundColor-day-night: #fafafa7a;
     --button-backgroundColor-day-night-hover: rgba(250, 250, 250, 0.8);
     --button-backgroundColor-day-night-active: rgba(197, 197, 197, 0.46);
