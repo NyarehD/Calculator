@@ -27,8 +27,11 @@ html{
     margin: 0;
     box-sizing: border-box;
 }
-body{
+.botty{
     background-color: var(--body-background-day);
+}
+.body-dark{
+    background-color: var(--body-background-night) !important;
 }
 h1{
     text-align: center;
@@ -36,7 +39,10 @@ h1{
     color: var(--header-textColor-day);
     margin: 20px 20px;
 }
-#inputNo{
+.h1-dark{
+    color: var(--header-textColor-night);
+}
+.inputNo{
     width: 370px;
     height: 80px;
     border-radius: 50px;
@@ -48,8 +54,12 @@ h1{
     color: var(--inputNo-textColor-day);
     overflow: auto;
 }
+.inputNo-dark{
+    background-color: var(--inputNo-backgroundColor-night);
+    color: var(--inputNo-textColor-night);
+}
 /* Making the buttons to center */
-#buttons {
+.buttons {
     margin: 30px auto;
     text-align: center;
     display: flex;
@@ -61,7 +71,10 @@ h1{
     padding: 20px 20px 40px 20px;
     border-radius: 50px;
 }
-#buttons button {
+.buttons-dark{
+    background-color: var(--calculator-background-night) !important;
+}
+.butt, button {
    width: 100px;
    height: 100px;
    padding: 0;
@@ -70,16 +83,17 @@ h1{
    margin: 4px 5px;
    outline: none;
 }
-#buttons > div {
+
+.buttons > div {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#buttons > div > button{
+.butt{
     border: none;
     background-color: var(--button-backgroundColor-day-night); /* Do not change this */
 }
-#buttons > div > button:hover{
+.butt:hover{
     background: var(--button-backgroundColor-day-night-hover);
 }
 .operator-button{
@@ -89,17 +103,17 @@ h1{
     background-color: var(--button-operator-backgroundColor-day-night-hover) !important;
     border: none;
 }
-#buttons button:active{
+.butt:active{
     border:none;
     background-color: var(--button-backgroundColor-day-night-active) !important;
 }
 
-#buttons > div:nth-child(7){
+.butt:nth-child(7){
     display: flex;
     justify-content: flex-start;
     margin: -160px -20px 0 0;
 }
-#buttons > div:nth-child(6){
+.butt:nth-child(6){
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
