@@ -106,9 +106,12 @@ h1{
     background-color: var(--button-operator-backgroundColor-day-night-hover) !important;
     border: none;
 }
+.operator-button:active{
+    background-color: rgba(255, 232, 130, 0.83) !important;
+}
 .butt:active{
     border:none;
-    background-color: var(--button-backgroundColor-day-night-active) !important;
+    background-color: var(--button-backgroundColor-day-night-active);
 }
 
 .special{
