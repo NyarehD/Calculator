@@ -1,6 +1,11 @@
 let input = document.querySelector(".inputNo");
 let operators = ["+", "-", "*", "/", "."];
-// Making the input function
+
+/**
+ * Adding the number into input
+ * @param {String} num input number in string form
+ * @returns the input string into display
+ */
 function addInput(num) {
     if (input.value[0] === '0') {
         console.log("run");
@@ -13,11 +18,16 @@ function addInput(num) {
         return input.value += num;
     }
 }
-// Making the all clear function
+/**
+ * Setting the input to 0
+ */
 function clsAll() {
     input.value = 0;
 }
-// Making the last one clear function
+/**
+ * Cut the last number of input number
+ * @returns input number in which the last one is cut or 0 when it has no more to be cut
+ */
 function cls() {
     if (input.value.length === 1) {
         return input.value = 0;
@@ -25,15 +35,23 @@ function cls() {
         return input.value = input.value.slice(0, -1);
     }
 }
+/**
+ * Calculating the input number
+ */
 function calculating() {
     input.value = eval(input.value);
 }
 
 // Night mode function
 const nightModeSwitch = document.getElementById("nightMode");
-// Checking if night mode is on or off by checking input checkbox
+/**
+ * Checking if night mode is on or off by checking input checkbox
+ */
 let nightMode = nightModeSwitch.checked;
 nightModeSwitch.addEventListener("change", nightModeChange);
+/**
+ * toggling the night mode
+ */
 function nightModeChange() {
     const bodyBackground = document.querySelector(".botty");
     const calculatorBackground = document.querySelector(".buttons");
