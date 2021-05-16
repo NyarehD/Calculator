@@ -84,10 +84,13 @@ h1{
    outline: none;
 }
 
-.buttons > div {
+.buttons > div:not(.special, .special0, .mode) {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.buttons > div:first-of-type{
+    margin-top: 30px;
 }
 .butt{
     border: none;
@@ -108,12 +111,12 @@ h1{
     background-color: var(--button-backgroundColor-day-night-active) !important;
 }
 
-.butt:nth-child(7){
+.special{
     display: flex;
     justify-content: flex-start;
-    margin: -160px -20px 0 0;
+    margin: -160px -40px 0 0;
 }
-.butt:nth-child(6){
+.special0{
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
