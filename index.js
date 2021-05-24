@@ -1,4 +1,4 @@
-let input = document.querySelector(".inputNo");
+let input = $(".inputNo")[0];
 let operators = ["+", "-", "*", "/", "."];
 
 /**
@@ -19,12 +19,20 @@ function addInput(num) {
     return input.value += num;
   }
 }
+
+/**
+ * Add input
+ */
+$(".butt").click((event) => {
+  addInput(event.currentTarget.value);
+});
+
 /**
  * Setting the input to 0
  */
-function clsAll() {
-    input.value = "0";
-}
+$("#clearAll").click(() => {
+  input.value = 0;
+})
 
 /**
  * Cut the last number of input number
@@ -36,20 +44,13 @@ function cls() {
     input.value = input.value.slice(0, -1);
   }
 }
+
 /**
  * Calculating the input number
  */
 function calculating() {
   input.value = eval(input.value);
 }
-
-// Night mode function
-const nightModeSwitch = document.getElementById("nightMode");
-
-/**
- * Checking if night mode is on or off by checking nightMode toggle(checkbox)
- */
-let nightMode = nightModeSwitch.checked;
 
 /**
  * Function for toggling the dark theme
@@ -72,24 +73,7 @@ $("#nightMode").click(() => {
  * To fix the issue where the switch is on dark but mode is in day mode after refreshing the page
  */
 window.addEventListener("load", () => {
-  if (nightMode) {
+  if ($("#nightMode")[0].checked) {
     nightModeChange();
   }
 });
-$(".buttons").click((event) => {
-    addInput(checkingInput(event));
-});
-
-function checkingInput(event) {
-    if (event.target.innerHTML === 'AC' || event.target.innerHTML === "C") {
-      return "";
-    } else if (
-      !operators.includes(event.target.innerHTML) &&
-      !event.target.value
-    ) {
-      return event.target.innerHTML;
-    } else if (operators.includes(event.target.value)) {
-      console.log(event.target.value);
-      return event.target.value;
-    }
-}
