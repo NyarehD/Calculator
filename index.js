@@ -49,21 +49,15 @@ const nightModeSwitch = document.getElementById("nightMode");
  */
 let nightMode = nightModeSwitch.checked;
 
-nightModeSwitch.addEventListener("change", nightModeChange);
-/**
- * toggling the night mode  
- */
 function nightModeChange() {
-    const bodyBackground = document.querySelector(".botty");
-    const calculatorBackground = document.querySelector(".buttons");
-    const inputNo = document.querySelector(".inputNo");
-    const header = document.querySelector("h1");
-    bodyBackground.classList.toggle("body-dark");
-    calculatorBackground.classList.toggle("buttons-dark");
-    inputNo.classList.toggle("inputNo-dark");
-    header.classList.toggle("h1-dark");
-    console.log("Changed");
+      $(".botty").toggleClass("body-dark");
+      $(".buttons").toggleClass("buttons-dark");
+      $(".inputNo").toggleClass("inputNo-dark");
+      $("h1").toggleClass("h1-dark");
 }
+$("#nightMode").click(() => {
+    nightModeChange();
+});
 /**
  * To fix the issue where the switch is on dark but mode is in day mode after refreshing the page
  */
