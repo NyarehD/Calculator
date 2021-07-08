@@ -1,56 +1,85 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
-  </head>
-  <body class="botty">
-    <div class="buttons">
-      <h1>Calculator</h1>
-      <input class="inputNo" value="0" disabled>
-      <div class="first-row">
-        <button id="clearAll" class="operator-button">AC</button>
-        <button id="clearBut" onclick="cls()" class="operator-button">C</button>
-        <button class="operator-button butt" value="/">D</button>
-        <button class="operator-button butt" value="*">x</button>
-      </div>
-      <div>
-        <button class="butt" value="7">7</button>
-        <button class="butt" value="8">8</button>
-        <button class="butt" value="9">9</button>
-        <button class="operator-button butt" value="-">-</button>
-      </div>
-      <div>
-        <button class="butt" value="4">4</button>
-        <button class="butt" value="5">5</button>
-        <button class="butt" value="6">6</button>
-        <button class="operator-button butt" value="+">+</button>
-      </div>
-      <div class="special0">
-        <button class="butt" value="1">1</button>
-        <button class="butt" value="2">2</button>
-        <button class="butt" value="3">3</button>
-        <button onclick="calculating()" style="height: 210px;" class="operator-button">=</button>
-      </div>
-      <div class="special">
-        <button style="width: 200px; " class="butt">0</button>
-        <button class="operator-button butt" value=".">.</button>
-      </div>
-      <div class="mode">
-        <img src="Assets/sun-1.svg" alt="Sun for day mode">
-        <label class="switch round">
-          <input type="checkbox" id="nightMode" value="false">
-          <span class="slider round"></span>
-        </label>
-        <img src="Assets/moon-1.svg" alt="Moon for night mode">
-      </div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <!-- Meta tags-->
+  <!-- Primary Meta Tags -->
+  <title>Calculator with dark mode</title>
+  <meta name="title" content="Calculator with dark mode">
+  <meta name="description" content="A calculator project with built-in dark mode.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://metatags.io/">
+  <meta property="og:title" content="Calculator with dark mode">
+  <meta property="og:description" content="A calculator project with built-in dark mode.">
+  <meta property="og:image"
+    content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://metatags.io/">
+  <meta property="twitter:title" content="Calculator with dark mode">
+  <meta property="twitter:description" content="A calculator project with built-in dark mode.">
+  <meta property="twitter:image"
+    content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+  <link rel="shortcut icon" href="/Assets/sun-1.svg" type="image/x-icon">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+</head>
+
+<body class="botty">
+  <div class="buttons">
+    <h1>Calculator</h1>
+    <input class="inputNo" value="0" disabled>
+    <div class="first-row">
+      <button id="clearAll" class="operator-button">AC</button>
+      <button id="clearBut" onclick="cls()" class="operator-button">C</button>
+      <button class="operator-button butt" value="/">D</button>
+      <button class="operator-button butt" value="*">x</button>
     </div>
-    <script src="/vendor/jQuery.js"></script>
-    <script src="index.js"> 
-    </script>
-  </body>
+    <div>
+      <button class="butt" value="7">7</button>
+      <button class="butt" value="8">8</button>
+      <button class="butt" value="9">9</button>
+      <button class="operator-button butt" value="-">-</button>
+    </div>
+    <div>
+      <button class="butt" value="4">4</button>
+      <button class="butt" value="5">5</button>
+      <button class="butt" value="6">6</button>
+      <button class="operator-button butt" value="+">+</button>
+    </div>
+    <div class="special0">
+      <button class="butt" value="1">1</button>
+      <button class="butt" value="2">2</button>
+      <button class="butt" value="3">3</button>
+      <button onclick="calculating()" style="height: 210px;" class="operator-button">=</button>
+    </div>
+    <div class="special">
+      <button style="width: 200px; " class="butt">0</button>
+      <button class="operator-button butt" value=".">.</button>
+    </div>
+    <div class="mode">
+      <img src="Assets/sun-1.svg" alt="Sun for day mode">
+      <label class="switch round">
+        <input type="checkbox" id="nightMode" value="false">
+        <span class="slider round"></span>
+      </label>
+      <img src="Assets/moon-1.svg" alt="Moon for night mode">
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="index.js">
+  </script>
+</body>
+
 </html>
